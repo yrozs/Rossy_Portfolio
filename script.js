@@ -21,10 +21,8 @@ function type() {
         charIndex++;
     }
 
-    // Update the content (the text will appear automatically due to the CSS ::before content logic)
-    // Here we just manage the animation state (wordIndex, charIndex)
     
-    // If word is fully typed
+
     if (!isDeleting && charIndex === currentWord.length) {
         isDeleting = true;
         setTimeout(type, 1500); // Pause before deleting
@@ -44,11 +42,7 @@ function type() {
 
 // Start the typing animation once the page loads
 document.addEventListener("DOMContentLoaded", () => {
-    // We don't need a complex JS implementation for the typing animation 
-    // because your CSS handles the animation using @keyframes words.
-    // However, if you want a true character-by-character typing effect, 
-    // the CSS ::before content must be removed, and this JS needs to write characters.
-    // For now, let's focus on the simpler, essential navigation functionality:
+
 });
 
 // ===================================
@@ -63,7 +57,6 @@ window.onscroll = () => {
     // A. Section Highlighting
     sections.forEach(sec => {
         let top = window.scrollY;
-        // Offset adjusted for fixed header height
         let offset = sec.offsetTop - 150; 
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
@@ -99,4 +92,5 @@ menuIcon.onclick = () => {
     // Also toggle the icon between bars and close (optional but recommended)
     menuIcon.classList.toggle('fa-bars');
     menuIcon.classList.toggle('fa-times');
+
 };
