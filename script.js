@@ -73,7 +73,6 @@ window.onscroll = () => {
     header.classList.toggle('sticky', window.scrollY > 100);
 
     // C. Remove mobile menu when scrolling 
-    // This prevents the menu from staying open if the user scrolls instead of clicking close
     nav.classList.remove('active');
     menuIcon.classList.remove('fa-times');
     menuIcon.classList.add('fa-bars');
@@ -94,3 +93,4 @@ menuIcon.onclick = () => {
     menuIcon.classList.toggle('fa-times');
 
 };
+
